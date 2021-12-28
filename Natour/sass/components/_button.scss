@@ -21,6 +21,7 @@
     }
   }
 
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -31,6 +32,8 @@
     transition: all 0.2s ease-in-out;
     position: relative;
     font-size: $default-font-size;
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
