@@ -72,10 +72,15 @@ body {
 
 .sidebar {
   background-color: var(--color-gray-dark-1);
-  flex: 0 0 18%; }
+  display: flex;
+  flex: 0 0 18%;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
   background-color: #fff;
+  background-color: orangered;
+  height: 80rem;
   flex: 1; }
 
 .logo {
@@ -151,3 +156,46 @@ body {
     border-radius: 50%; }
   .user-nav__user-name {
     margin-left: 1rem; }
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5em; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: 0.5rem; }
+  .side-nav__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav___item:active::before {
+    background-color: var(--color-gray-light-1); }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--color-gray-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: relative; }
+  .side-nav__icon {
+    font-size: 1.75rem;
+    margin-right: 2rem; }
+
+.legal {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2.5rem;
+  color: var(--color-gray-light-4); }
